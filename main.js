@@ -8,8 +8,10 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
     // Print Aplicação
     console.log('Aplicação inicial')
     let mainWindow = new BrowserWindow({
-        width:600, //fullscreen  browser electron
-        height:400,
+        fullscreen: true,
+        width:800, //fullscreen  browser electron
+        height:600,
+        autoHideMenuBar:true,
         //x:50, // Separação de 50px no eixo X
         //y:50, // Separação de 50 px no eixo Y
         //resizable:false // Perguntar se a janela pode ser redimencionada ou não;
