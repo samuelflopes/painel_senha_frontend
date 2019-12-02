@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Painel de Senhas</title>
+
+    <link href="/app/css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+			jQuery(window).load(function($){
+				atualizaRelogio();
+			});
+		</script>
+    </head>
+
+    <body>
+        <div class='row0' role='grid'>
+            <output id="hora"></output>
+            <output id="data"></output>
+        </div>
+<!-- Boas Vindas e Botão para direcionar a janela tipoSenha  -->
+        <div class='row  size' role='grid'>
+            <div class='col-spaced' role='grid'>
+                <h2 class="bem-vindo">Bem-Vindo<br>ao<br>Registro Acadêmico</h2> 
+                <button class="button" type="button" onclick="window.location.href='tipoSenha.html'">INICIAR</button>
+            </div>
+        </div>
+
+<!-- Roda pé. Logo IFB que direciona ao site do IFB -->
+    <footer class='roww'>
+        <div class="row-end">
+            <a href="https://www.ifb.edu.br/"><img class="logo" src="https://www.ifb.edu.br/images/logo_ifb.jpg"></a>
+        </div>
+    </footer>
+    </body>
+    <script src="renderer.js"></script>
+</html>

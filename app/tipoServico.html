@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Painel de Senhas</title>
+    <link href="/app/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+			jQuery(window).load(function($){
+				atualizaRelogio();
+			});
+		</script>
+    </head>
+
+    <body>
+    
+    <div class='row' role='grid'>
+    <output id="hora">
+    </output>
+    <output id="data">
+    </output>
+    </div>
+    <div class='row size' role='grid'>
+        <div class='col-spaced' role='grid'>
+            <button class="button" type="button" onclick="window.location.href='imprimindo.html'">MATRÍCULA</button>
+            <button class="button" type="button" onclick="window.location.href='imprimindo.html'">OUTROS</button>
+        </div>
+    </div>
+    
+    <footer class='roww'>
+
+    <div class="row-end-voltar">
+        <button class="voltar" type="button" onclick="window.location.href='tipoSenha.html'">VOLTAR</button>
+        <a href="https://www.ifb.edu.br/"><img class="logo-voltar" src="https://www.ifb.edu.br/images/logo_ifb.jpg"></a>
+
+    </div>
+    </footer>
+</body>
+    <script src="renderer.js"></script>
+
+</html>
