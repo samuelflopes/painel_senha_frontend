@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Painel de Senhas</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/open_sans.css" rel="stylesheet">
-    <script src="js/jquery-1.11.2.js"></script>
-		<script type="text/javascript">
-			jQuery(window).load(function($){
-				atualizaRelogio();
-			});
-		</script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Painel de Senhas</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/open_sans.css" rel="stylesheet">
+        
     </head>
     
-<body>
-    <div class='row0' role='grid'>
-    <output id="hora">
-    </output>
+    <body onload="clock();">
+        <div class='row0' role='grid'>
+            <span id="hora"></span>
+            <spam id="data"></span>
+        </div>
+            
+        <div class="imgur">
+            <img class="imprim" src="https://icons-for-free.com/download-icon-print-131964753156480777_512.png">
+        </div>
 
-    <output id="data">
-    </output>
-    </div>
-        
-    <div class="imgur">
-        <img class="imprim" src="https://icons-for-free.com/download-icon-print-131964753156480777_512.png">
-    </div>
+        <h2 class="imprimr" ><br><br><br><br><br>Imprimindo...</h2> 
 
-    <h2 class="imprimr" ><br><br><br><br><br>Imprimindo...</h2> 
-
-    <footer class='roww'>
-    <div class="row-end">
-        <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
-    </div>
-    </footer>
-
-</body>
-
-    <script src="js/renderer.js">
+        <footer class='roww'>
+            <div class="row-end">
+                <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
+            </div>
+        </footer>
+    <!--Requisições de arquivos js-->
+    <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
+    <script src="js/date_time.js"></script> <!-- Data e hora -->
+    
+    <script src="js/renderer.js"></script> 
+    </body>
     </script>
 </html>

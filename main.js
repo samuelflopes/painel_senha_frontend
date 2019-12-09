@@ -9,8 +9,8 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
     console.log('Aplicação inicial')
     let mainWindow = new BrowserWindow({
         fullscreen: true,
-        width:800, //fullscreen  browser electron
-        height:600,
+        //width:800, //fullscreen  browser electron
+        //height:600,
         autoHideMenuBar:true,
         //x:50, // Separação de 50px no eixo X
         //y:50, // Separação de 50 px no eixo Y
@@ -27,7 +27,11 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
     // ready-to-show, é executado quando o html estiver pronto para ser exibido.
     mainWindow.on('ready-to-show', () => {
         mainWindow.show();
+
+         //Abre as ferramentas de desenvolvimento quando o app é iniciado
+        mainWindow.webContents.openDevTools();
     });
+
 
     //tipoSenha.loadURL(`file://${__dirname}/app/tipoSenha.html`);
 
