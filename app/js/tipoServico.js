@@ -17,7 +17,16 @@ function criaBtn(idTagPai, classe, tipo, nome, valor, texto, acao) {
 function onclickBtn() {
     console.log('Click no botão');
     window.location.href = 'imprimindo.html'; // Redirecionando a uma nova Pagina;
+// In page 2.
+    console.log(require('electron').remote.getGlobal('sharedObject').someProperty)
 }
+
+
+
+// function btnGetSenha(){
+//     var objSenha = document.getElementById("senha");
+//     var objSenha = document.getElementById("senha");
+// }
 
 function getTipoSenhaAPI(token) {
     const tokenString = "Token " + token;

@@ -14,10 +14,12 @@ function criaBtn(idTagPai, classe, tipo, nome, valor, texto, acao) {
     tagPai.append(element);
 }
 
+// Ação dos butões ao serem clicados
 function onclickBtn() {
     console.log('Click no botão');
-    window.location.href='tipoServico.html';
-    
+    window.location.href='tipoServico.html'; // Passar p/ proxima página
+        // In page 1.
+    require('electron').remote.getGlobal('sharedObject').element.value = 'valor'
 }
 
 function getTipoSenhaAPI(token) {
@@ -32,6 +34,7 @@ function getTipoSenhaAPI(token) {
             "Authorization": tokenString
         }
     };
+
     // 
     let data = '';
     let apiRequest = https.request(url, options, function(response) { // requisição do REQUEST 'https'

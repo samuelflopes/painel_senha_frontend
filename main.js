@@ -9,19 +9,13 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
     console.log('Aplicação inicial')
     let mainWindow = new BrowserWindow({
         fullscreen: true,
-        //width:800, //fullscreen  browser electron
-        //height:600,
         autoHideMenuBar:true,
-        //x:50, // Separação de 50px no eixo X
-        //y:50, // Separação de 50 px no eixo Y
-        //resizable:false // Perguntar se a janela pode ser redimencionada ou não;
         show: false,
         webPreferences:{
             nodeIntegration:true
         }
     });
     // CARREGANDO A URL DA PAGINA COM O CONTEUDO PRINCIPAL
-    //console.log(`${__dirname}`); 
     mainWindow.loadURL(`file://${__dirname}/app/index.html`);
 
     // ready-to-show, é executado quando o html estiver pronto para ser exibido.
@@ -32,7 +26,6 @@ app.on('ready', () => { // (APP, GERENCIA EVENTOS)
         mainWindow.webContents.openDevTools();
     });
 
-
     //tipoSenha.loadURL(`file://${__dirname}/app/tipoSenha.html`);
 
 });
@@ -41,8 +34,11 @@ app.on('window-all-close',() =>{
     app.quit();
 });
 
-
-
+// In the main process.
+global.sharedObject = {
+    id: 'Preferencial',
+    id: 'Não Preferencial'
+}
 
 
 
