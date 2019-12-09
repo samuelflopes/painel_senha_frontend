@@ -6,41 +6,33 @@
     <title>Painel de Senhas</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/open_sans.css" rel="stylesheet">
-    <script src="js/jquery-1.11.2.js"></script>
-		<script type="text/javascript">
-			jQuery(window).load(function($){
-				atualizaRelogio();
-			});
-        </script>
-        <!--Fechar modal
-        <script>
-            const{remote} = require('electron');
-        </script>
-        -->
+
 </head>
 
-<body>
-
-    <!-- <button class="button" type="button" onclick="window.location.href='/index.html'">Voltar</button> -->
-    <div class='row' role='grid'>
-        <output id="hora"></output>
-        <output id="data"></output>
-    </div>
-    
-    <div class='row  size' role='grid'>
-        <div class='col-spaced' role='grid'>
-            <button class="button margin" type="button" onclick="window.location.href='tipoServico.html'">PREFERENCIAL</button>
-            <button class="button margin" type="button" onclick="window.location.href='tipoServico.html'">CONVENCIONAL</button>
+    <body onload="clock();">
+        <!-- <button class="button" type="button" onclick="window.location.href='/index.html'">Voltar</button> -->
+        <div class='row' role='grid'>
+            <span id="hora"></span>
+            <span id="data"></span>
         </div>
-    </div>
+        
+        <div class='row size' role='grid'>
+            <div class='col-spaced' role='grid'>
+                <button class="button margin" type="button" onclick="window.location.href='tipoServico.html'">PREFERENCIAL</button>
+                <button class="button margin" type="button" onclick="window.location.href='tipoServico.html'">CONVENCIONAL</button>
+            </div>
+        </div>
+        
+        
+        <div class="row-end">
+            <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
+        </div>
+        <!--Requisições de arquivos js-->
+        <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
+        <script src="js/date_time.js"></script> <!-- Data e hora -->
+        <script src="js/main.js"></script> <!-- Aplicação principal criação de janela (electron) -->
+        <script src="js/renderer.js"></script> 
+        <script src="js/tipoSenha.js"></script>
     
-    <footer class='roww'>
-    <div class="row-end">
-        <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
-    </div>
-    </footer>
-    
-</body>
-    <script src="js/renderer.js">
-    </script>
+    </body>
 </html>

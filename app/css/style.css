@@ -1,4 +1,4 @@
-body{
+body{/*OK*/
     /* font-size:140%; */
     height: 95vh;
     font-family: 'Open Sans', sans-serif;
@@ -7,7 +7,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
-
+/*OK*/
 .row0{
     display: flex;
     justify-content: space-around;
@@ -57,11 +57,18 @@ body{
     font-weight: 750;
     font-size: 1.5em;
     color: white;
-    align-self: center;
+    /*align-self: center;*/
+    margin-left:-280%;
+    float: left;
+
     cursor: pointer;
     box-shadow:  3px 3px 5px rgb(148, 142, 142);
-}
 
+}
+#container{
+    margin-left: -40em;
+
+}
 .voltar:hover{
     background-color: white;
     color: green;
@@ -76,19 +83,21 @@ body{
     display:flex;
     justify-content: space-around;
     margin-left: 75%;
-    /* width: 175vw; */
+    /* width: 175vw;*/
 }
 
 .row-end-voltar{
-    text-align: center;
+    
     display:flex;
     justify-content: space-around;
     margin-left: 0.5%;
-    /* width: 120vw; */
+    
 }
+
 .logo-voltar{
     width: 20em;
     margin-left: 77%;
+    position: fixed;
 }
 
 .col-spaced{
@@ -99,10 +108,14 @@ body{
 
 .logo {
     width:20em;
-    
-    right: 100%;
+    right:100%;
 }
-
+#fixed{
+    width:20em;
+    right:-24.3%;
+	position: relative;
+}
+/*---------------------------------------------------------------------------------------*/
 #hora {
     font-size: 3em;
     font-weight: bold;
@@ -113,7 +126,7 @@ body{
 #data {
     font-size: 3em;/*Tamanho font data*/
     font-weight: bold;
-    margin-left: 20rem;
+    margin-left: 30rem;
 }
 
 .margin{

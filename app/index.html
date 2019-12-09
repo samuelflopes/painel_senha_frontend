@@ -7,21 +7,16 @@
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/open_sans.css" rel="stylesheet">
-
-    <script src="js/jquery-1.11.2.js"></script>
-    
-		<script type="text/javascript">
-			jQuery(window).load(function($){
-				atualizaRelogio();
-			});
-		</script>
     </head>
 
-    <body>
+    <body onload="clock();">
+
+        <!-- Hora e Data -->
         <div class='row0' role='grid'>
-            <output id="hora"></output>
-            <output id="data"></output>
+            <span id="hora"></span>
+            <span id="data"></span>
         </div>
+
 <!-- Boas Vindas e Botão para direcionar a janela tipoSenha  -->
         <div class='row  size' role='grid'>
             <div class='col-spaced' role='grid'>
@@ -36,6 +31,13 @@
             <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
         </div>
     </footer>
+    
+
+    <!--Requisições de arquivos js-->
+    <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
+    <script src="js/date_time.js"></script> <!-- Data e hora -->
+    <script src="js/main.js"></script> <!-- Aplicação principal criação de janela (electron) -->
+    <script src="js/renderer.js"></script> 
+
     </body>
-    <script src="js/renderer.js"></script>
 </html>
