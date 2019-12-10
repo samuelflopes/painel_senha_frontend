@@ -1,7 +1,7 @@
 // Fazendo uma requisição https
 const https = require('https');
 
-function criaBtn(idTagPai, classe, tipo, nome, valor, texto, acao) {
+const criaBtn = (idTagPai, classe, tipo, nome, valor, texto, acao) => {
     var element = document.createElement("button");
     element.className = classe;
     element.type = tipo;
@@ -14,11 +14,16 @@ function criaBtn(idTagPai, classe, tipo, nome, valor, texto, acao) {
     tagPai.append(element);
 }
 
-function onclickBtn() {
+let onclickBtn = ($event) => {
     console.log('Click no botão');
+    console.log($event.target);
+    let id = $event.target.value;
+    let nome = $event.target.innerText;
+    console.log(id, nome);
+    
+    localStorage.setItem('cat.id', id);
+    localStorage.setItem('cat.nome', nome);
     window.location.href = 'imprimindo.html'; // Redirecionando a uma nova Pagina;
-// In page 2.
-    console.log(require('electron').remote.getGlobal('sharedObject').someProperty)
 }
 
 
