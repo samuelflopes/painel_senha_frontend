@@ -1,5 +1,5 @@
 {
-  "name": "Totem",
+  "name": "totem",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.2"
+    "electron": "^7.1.4"
   }
 }

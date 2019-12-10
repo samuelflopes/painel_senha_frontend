@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const printer = require('node-native-printer');
 const fs = require('fs');
 const os = require('os');
@@ -42,3 +43,9 @@ window.location.href = 'ticket.html';
 
 
 //printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
+=======
+setTimeout(function(){
+    window.location.href = 'index.html';
+    alert("Boom!");
+}, 5000);
+>>>>>>> 97684d44e8223c76504620b9990d949629d02c0c

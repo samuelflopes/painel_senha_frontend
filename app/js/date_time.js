@@ -8,6 +8,15 @@ const clock = () => {
     s = checkTime(s);
     document.getElementById('hora').innerHTML =
     h + ":" + m + ":" + s;
+
+    //DATE
+    let dia = today.getDate();
+    let mes = today.getMonth();
+    let ano = today.getUTCFullYear();
+    
+    document.getElementById('data').innerHTML = today = dia +'/'+(mes++) + '/' + ano;
+
+
     let t = setTimeout(clock, 500);
 }
 
@@ -16,4 +25,4 @@ const checkTime = (i) => {
     return i;
 }
 
-// DATE
+

@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Painel de Senhas</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="css/open_sans.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Painel de Senhas</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/open_sans.css" rel="stylesheet">
 
-    <!--Requisições de arquivos js-->
-    <script src="js/date_time.js"></script> <!-- Data e hora -->
-    <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
-    <script src="js/tipoServico.js"></script>
+        <!--Requisições de arquivos js-->
+        <script src="js/date_time.js"></script> <!-- Data e hora -->
+        <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
+        <script src="js/tipoServico.js"></script>
     </head>
 
     <body onload="clock();">
     
-    <div class='row' role='grid'>
-        <span id="hora"></span>
-        <span id="data"></span>
-    </div>
-
-
-    
-    <div class='row size' role='grid'>
-        <div class='col-spaced' role='grid' id="divBtn">
-            <!-- <button class="button" type="button" onclick="window.location.href='imprimindo.html'">MATRÍCULA</button>
-            <button class="button" type="button" onclick="window.location.href='imprimindo.html'">OUTROS</button> -->
+        <div class='row0' role='grid'>
+            <span id="hora"></span>
+            <span id="data"></span>
         </div>
-    </div>
 
-        <footer class='roww'>
-            <div class="row-end">
-                    <div id="container">
-                        <button class="voltar" type="button" onclick="location.href='tipoSenha.html'">VOLTAR</button>
-                    </div>
-                <a href="https://www.ifb.edu.br/"><img id="fixed" src="img/logo_ifb.jpg"></a>
+
+        
+        <div class='row size' role='grid'>
+            <div class='col-spaced' role='grid' id="divBtn">
+                <!-- <button class="button" type="button" onclick="window.location.href='imprimindo.html'">MATRÍCULA</button>
+                <button class="button" type="button" onclick="window.location.href='imprimindo.html'">OUTROS</button> -->
             </div>
+        </div>
+
+            
+        <footer class="row-end">
+            <button class="voltar" type="button" onclick="location.href='tipoSenha.html'">VOLTAR</button>
+            <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
         </footer>
     </body>
 </html>
