@@ -10,11 +10,10 @@ const clock = () => {
     h + ":" + m + ":" + s;
 
     //DATE
-    let dia = today.getDate();
-    let mes = today.getMonth();
-    let ano = today.getUTCFullYear();
     
-    document.getElementById('data').innerHTML = dia +'/'+(mes++) + '/' + ano;
+    let dataCerta = `${today.getUTCDate()}/${today.getUTCMonth()+1}/${today.getUTCFullYear()}`;
+    document.getElementById('data').innerHTML = dataCerta;
+    
 
 
     let t = setTimeout(clock, 500);

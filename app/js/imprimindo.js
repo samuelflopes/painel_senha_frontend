@@ -1,8 +1,24 @@
 setTimeout(function () {
     window.location.href = 'index.html';
     //alert("Boom!"); TESTE DO BOOOMMM
-}, 5000);
+}, 5500);
 
+// pacotes instalados
+// versão node 8.16.2
+// "bcrypt": "^3.0.7",
+// "canvas": "^2.6.0",
+// "canvas-constructor": "^3.1.0",
+// "canvas-prebuilt": "^2.0.0-alpha.14",
+// "edge-cs": "^1.2.1",
+// "edge-js": "^13.0.1",
+// "electron": "^7.1.4",
+// "electron-edge-js": "^12.8.1",
+// "node-cls": "^1.0.3",
+// "node-gyp": "^6.0.1",
+// "node-native-printer": "^1.0.0-beta.5"
+// -----------------------------------------------
+// Para fazer os pacotes da impessora funcionar foi necessario ir nos modulo do node e ir na pasta node-native-printer
+// acessar o arquivo .env e trocar o NNP_PACKAGE=edge-js para NNP_PACKAGE=electron-edge-js 
 
 const printer = require('node-native-printer');
 const fs = require('fs');
@@ -17,14 +33,26 @@ let cat_id = localStorage.getItem('cat.id');
 let tipo_id = localStorage.getItem('tipo.id');
 let categoria = localStorage.getItem('cat.nome');
 let tipo = localStorage.getItem('tipo.nome');
-let date = new Date();
-let hour = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-let now = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}T${date.getHours()}:${date.getMinutes()}.${date.getSeconds()}Z`;
+
+// Criando data no format para o Django
+let date = String(new Date());
+
+function toISOString(s) {
+  let months = {jan:'01',feb:'02',mar:'03',apr:'04',may:'05',jun:'06',
+                jul:'07',aug:'08',sep:'09',oct:'10',nov:'11',dec:'12'};
+  let newDate = date.split(' ');
+
+  return newDate[3] + '-' +
+         months[newDate[1].toLowerCase()] + '-' +
+         ('0' + newDate[2]).slice(-2) + 'T' +
+         newDate[4] + '.' +newDate[5].substr(4) + 'Z';
+}
+
+let dateTime = toISOString(date);
+
 
 
 const imprimir = (data) => {
-    // var buf = layout(data);
-    // fs.writeFileSync( os.tmpdir() + "/tmp.png", buf);
 
     let options = {
         "collate": true,
@@ -35,17 +63,17 @@ const imprimir = (data) => {
     }
     let timestamp = data.hora_data.split('T');
     console.log(timestamp);
-    //let hour = timestamp[1].split('.');
+    let hour = timestamp[1].split('.');
     let fullDate = timestamp[0].split('-').reverse().join('/');
-    let text = `           REGISTRO  ACADÊMICO \n\n            ${fullDate}         ${hour} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n.` 
-    // printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
+    let text = `           REGISTRO  ACADÊMICO \n\n            ${fullDate}         ${hour[0]} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n.` 
     printer.printText(text);
 };
 
 
 let params = {
     'tipo': tipo_id, 
-    'categoria': cat_id
+    'categoria': cat_id,
+    'hora_data': dateTime
 };
 
 let postData = querystring.stringify(params);
