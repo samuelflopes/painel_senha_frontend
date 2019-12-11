@@ -1,49 +1,120 @@
-// Retorna para a página principal após 5 segundos 
 setTimeout(function () {
     window.location.href = 'index.html';
     //alert("Boom!"); TESTE DO BOOOMMM
 }, 5000);
 
+
 const printer = require('node-native-printer');
 const fs = require('fs');
 const os = require('os');
-const Canvas = require("canvas");
+
+const https = require('https');
+const querystring = require('querystring');
+
+const { Canvas } = require("canvas-constructor");
+
+let cat_id = localStorage.getItem('cat.id');
+let tipo_id = localStorage.getItem('tipo.id');
+let categoria = localStorage.getItem('cat.nome');
+let tipo = localStorage.getItem('tipo.nome');
 
 
-let printerList = printer.listPrinters();
-console.log(printerList);
-printer.setPrinter('EPSON TM-L90 Liner-Free (1)');
+// const layout = (data) => {
+//     let canvas = new Canvas(200, 200)
+//     canvas.setTextAlign = 'center';
+//     canvas.font = '10px serif';
+//     canvas.addText(`${data.hora_data}`, 100, 20);
+//     // .font = '10px serif'
+//     // .setTextAlign = 'center'
+//     // .addText('Registro    Acadêmico', 100, 30)
+//     // .setTextAlign = 'center'
+//     // .font = '20px serif'
+//     // .addText(`${data.senha}`, 100, 40)
+//     // .setTextAlign = 'center'
+//     // .font = '10px serif'
+//     // .setTextAlign = 'right'
+//     // .addText("Tipo: " + `${tipo}`, 100, 80)
+//     // .font = '10px serif'
+//     // .setTextAlign = 'right'
+//     // .addText("Categoria: " + `${categoria}`, 100, 90)
+//     canvas.toBuffer();
+//     return canvas;
+
+// }; 
+ 
+
+const imprimir = (data) => {
+    // var buf = layout(data);
+    // fs.writeFileSync( os.tmpdir() + "/tmp.png", buf);
+
+    let options = {
+        "collate": true,
+        "color": true,
+        "copies": 1,
+        "duplex": "Default",
+        "Resolutions": "High"
+    }
+    let timestamp = data.hora_data.split('T');
+    console.log(timestamp);
+    let hour = timestamp[1].split('.');
+    let text = `                     ${timestamp[0]}         ${hour[0]} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n          \n   .    ` 
+    // printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
+    printer.printText(text);
+};
 
 
-const { createCanvas, loadImage } = require('canvas');
-const canvas = createCanvas(200, 200);
-const ctx = canvas.getContext('2d');
+let params = {
+    'tipo': tipo_id, 
+    'categoria': cat_id
+};
+
+let postData = querystring.stringify(params);
+
+const getTipoSenhaAPI = (token) => {
+    const tokenString = "Token " + token;
+    
+
+    let url = 'https://danielb.pythonanywhere.com/api/senha/';
+
+    // Opções da requisição LER Informações do banco
+    let options = {
+        method: 'POST', // Requisição POST
+        headers: {
+            "Authorization": tokenString,
+            "Content-Type": 'application/x-www-form-urlencoded'
+        }
+    };
 
 
-// Write "Awesome!"
-//ctx.font = '10px Corbel Light'
-ctx.font = '10px serif';
-ctx.textAlign = 'center'
-ctx.fillText('Registro    Acadêmico', 100, 20);
-ctx.textAlign = 'center'
-ctx.font = '20px serif';
-ctx.fillText('001', 100, 50);
-ctx.textAlign = 'center'
-ctx.font = '25px serif';
-ctx.fillText('', 100, 100);
+    let data = '';
+    let apiRequest = https.request(url, options, function (response) { // requisição do REQUEST 'https'
+        console.log('OK');
+        console.log('statusCode:', response.statusCode);
+        response.on('data', chunk => {
+            data += chunk;
+        });
 
-var buf = canvas.toBuffer();
-fs.writeFileSync(os.tmpdir() + "/tmp.png", buf);
-
-let options = {
-    "collate": true,
-    "color": true,
-    "copies": 1,
-    "duplex": "Default",
-    "Resolutions": "High"
+        response.on('end', () => {
+            console.log('Done!');
+            data = JSON.parse(data);
+            console.log(data);
+            imprimir(data);
+        });
+    });
+    apiRequest.write(postData);
+    
+    apiRequest.end();
 }
 
-window.location.href = 'ticket.html';
 
-//printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
-f1eb1e3bda615f31356b81aec3355eaba9b5154b
+
+
+
+// Criar a conta para acesso API e depois gerar o token
+let token = 'c05a60720dc95aba6542c9aa673d87701a6a607b';
+window.onload = getTipoSenhaAPI(token);
+
+
+
+
+

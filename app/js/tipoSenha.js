@@ -19,14 +19,16 @@ const onclickBtn = ($event) => {
     console.log('Click no botão');
     let nome = $event.target.innerText;
     let id = $event.target.value;
-
+    
     localStorage.setItem('tipo.id', id);
     localStorage.setItem('tipo.nome', nome);
 
+    
     window.location.href = 'tipoServico.html'; // Passar p/ proxima página
 }
 
-// Função para acesso a API
+
+//////////////////////////////////////////////////////////
 const getTipoSenhaAPI = (token) => {
     const tokenString = "Token " + token;
 
@@ -39,6 +41,7 @@ const getTipoSenhaAPI = (token) => {
             "Authorization": tokenString
         }
     };
+
 
     let data = '';
     let apiRequest = https.request(url, options, function (response) { // requisição do REQUEST 'https'

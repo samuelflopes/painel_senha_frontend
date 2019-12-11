@@ -132,7 +132,7 @@ font-size: 3em;
 max-width: 40%;
 max-height: 40%; 
 margin-left: -11%;
-margin-top: 8.5%;
+margin-top: 12.5%;
 position: absolute;
 /* float: center; */
 /* align-content: center; */
@@ -140,8 +140,8 @@ position: absolute;
 /*Tela 4 frase imprimindo */
 .imprimr {
 font-size: 2rem;
-margin-top: 20%;
-margin-left: -5%;
+margin-top: 17%;
+margin-left: -8%;
 position: absolute;
 }
 

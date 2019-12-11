@@ -1,5 +1,5 @@
 {
-  "name": "totem",
+  "name": "painel",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -9,11 +9,17 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^7.1.2"
-  },
   "dependencies": {
-    "edge": "^7.10.1",
-    "node-gyp": "^6.0.1"
+    "bcrypt": "^3.0.7",
+    "canvas": "^2.6.0",
+    "canvas-constructor": "^3.1.0",
+    "canvas-prebuilt": "^2.0.0-alpha.14",
+    "edge-cs": "^1.2.1",
+    "edge-js": "^13.0.1",
+    "electron": "^7.1.4",
+    "electron-edge-js": "^12.8.1",
+    "node-cls": "^1.0.3",
+    "node-gyp": "^6.0.1",
+    "node-native-printer": "^1.0.0-beta.5"
   }
 }
