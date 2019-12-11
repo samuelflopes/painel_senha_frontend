@@ -19,30 +19,6 @@ let categoria = localStorage.getItem('cat.nome');
 let tipo = localStorage.getItem('tipo.nome');
 
 
-// const layout = (data) => {
-//     let canvas = new Canvas(200, 200)
-//     canvas.setTextAlign = 'center';
-//     canvas.font = '10px serif';
-//     canvas.addText(`${data.hora_data}`, 100, 20);
-//     // .font = '10px serif'
-//     // .setTextAlign = 'center'
-//     // .addText('Registro    Acadêmico', 100, 30)
-//     // .setTextAlign = 'center'
-//     // .font = '20px serif'
-//     // .addText(`${data.senha}`, 100, 40)
-//     // .setTextAlign = 'center'
-//     // .font = '10px serif'
-//     // .setTextAlign = 'right'
-//     // .addText("Tipo: " + `${tipo}`, 100, 80)
-//     // .font = '10px serif'
-//     // .setTextAlign = 'right'
-//     // .addText("Categoria: " + `${categoria}`, 100, 90)
-//     canvas.toBuffer();
-//     return canvas;
-
-// }; 
- 
-
 const imprimir = (data) => {
     // var buf = layout(data);
     // fs.writeFileSync( os.tmpdir() + "/tmp.png", buf);
@@ -57,7 +33,8 @@ const imprimir = (data) => {
     let timestamp = data.hora_data.split('T');
     console.log(timestamp);
     let hour = timestamp[1].split('.');
-    let text = `                     ${timestamp[0]}         ${hour[0]} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n          \n   .    ` 
+    let fullDate = timestamp[0].split('-').reverse().join('/');
+    let text = `           REGISTRO  ACADÊMICO \n\n            ${fullDate}         ${hour[0]} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n.` 
     // printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
     printer.printText(text);
 };
@@ -106,15 +83,6 @@ const getTipoSenhaAPI = (token) => {
     apiRequest.end();
 }
 
-
-
-
-
 // Criar a conta para acesso API e depois gerar o token
-let token = 'c05a60720dc95aba6542c9aa673d87701a6a607b';
+let token = 'af27e40d5f4ace1a507555a8d8f30b6707e34f21';
 window.onload = getTipoSenhaAPI(token);
-
-
-
-
-

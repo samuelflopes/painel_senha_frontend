@@ -65,5 +65,5 @@ function getTipoSenhaAPI(token) {
     apiRequest.end();
 }
 //Criar a conta para acesso API e depois gerar o token
-let token = 'c05a60720dc95aba6542c9aa673d87701a6a607b';
+let token = 'af27e40d5f4ace1a507555a8d8f30b6707e34f21';
 window.onload = getTipoSenhaAPI(token);
