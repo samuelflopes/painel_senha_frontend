@@ -1,5 +1,5 @@
 body{
-    
+    /* font-size:140%; */
     height: 95vh;
     font-family: 'Open Sans', sans-serif;
     color: green;
@@ -7,151 +7,199 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
-
+  
 .row0{
-    display: flex;
-    justify-content: space-around;
+display: flex;
+justify-content:flex-end;
 }
 
 .col{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
+display:flex;
+justify-content: center;
+flex-direction: column;
 }
 
 .bem-vindo{
-    text-align: center; 
-    font-size: 4em;
+text-align: center; 
+font-size: 3em;
 }
 
 /* Opção para seleção dos butões*/
 .button {
-    background-color: white;
-    border: 3px solid green;
-    text-decoration: none;
-    border-radius: 1em;
-    width: 12em;
-    height: 2.7em;
-    font-weight: 750;
-    font-size: 1.5em;
-    color: green;
-    align-self: center;
-    cursor: pointer;
-    box-shadow:  3px 3px 5px rgb(148, 142, 142);
-    
+background-color: white;
+border: 3px solid green;
+text-decoration: none;
+border-radius: 1em;
+width: 12em;
+height: 2.7em;
+font-weight: 750;
+font-size: 1.5em;
+color: green;
+align-self: center;
+cursor: pointer;
+box-shadow:  3px 3px 5px rgb(148, 142, 142);
+
 }
-  /* Modifica a cor quando o mouse fica em cima do botão */
+/* Modifica a cor quando o mouse fica em cima do botão */
 .button:hover {
-    background-color: green;
-    color: white;
-    box-shadow:  3px 3px 5px rgb(148, 142, 142);
+background-color: green;
+color: white;
+box-shadow:  3px 3px 5px rgb(148, 142, 142);
 }
 
 .voltar{
-    background-color: green;
-    border: 3px solid green;
-    text-decoration: none;
-    border-radius: 0.6em;
-    width: 7em;
-    height: 2em;
-    font-weight: 750;
-    font-size: 1.5em;
-    color: white;
-    margin-left:-280%;
-    float: left;
-
-    cursor: pointer;
-    box-shadow:  3px 3px 5px rgb(148, 142, 142);
-
+background-color: green;
+border: 3px solid green;
+text-decoration: none;
+border-radius: 0.6em;
+width: 7em;
+height: 2em;
+font-weight: 750;
+font-size: 1.5em;
+color: white;
+cursor: pointer;
+box-shadow:  3px 3px 5px rgb(148, 142, 142);
+float: left;
+margin-left: -65%;
+position: absolute;
 }
-#container{
-    margin-left: -40em;
 
-}
 .voltar:hover{
-    background-color: white;
-    color: green;
-    box-shadow:  3px 3px 5px rgb(148, 142, 142);
+background-color: white;
+color: green;
+box-shadow:  3px 3px 5px rgb(148, 142, 142);
 }
+
 .row{
-    display: flex;
-    justify-content: space-around;
+display: flex;
+justify-content: space-around;
 }
+
 .row-end{
-    text-align: center;
-    display:flex;
-    justify-content: space-around;
-    margin-left: 75%;
+text-align: center;
+display:flex;
+justify-content: space-around;
+margin-left: 75%;
+align-content: center;
+/* width: 175vw; */
 }
 
 .row-end-voltar{
-    
-    display:flex;
-    justify-content: space-around;
-    margin-left: 0.5%;
-    
+text-align: center;
+display:flex;
+justify-content: space-around;
+margin-left: 0.5%;
+align-content: center;
+/* width: 120vw; */
 }
 
-.logo-voltar{
-    width: 20em;
-    margin-left: 77%;
-    position: fixed;
+.logo{
+width: 20em;
+align-content:left; 
 }
 
 .col-spaced{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
 }
-
-.logo {
-    width:20em;
-    right:100%;
-}
-#fixed{
-    width:20em;
-    right:-24.3%;
-	position: relative;
-}
-
+/*Ajustes das horas*/
 #hora {
-    font-size: 3em;
-    font-weight: bold;
-    margin-left: 52rem;
+font-size: 29px;
+font-weight: bold;
+margin-left: 47%;
 }
 
 /*Ajustes de data*/
 #data {
-    font-size: 3em;/*Tamanho font data*/
-    font-weight: bold;
-    margin-left: 30rem;
+font-size: 29px;/*Tamanho font data*/
+font-weight: bold;
+margin-left: 20%;
 }
 
 .margin{
-    margin-top: .8em;
+margin-top: .8em;
 }
 
 /*Configuração dos textos com h2*/
 .h2{
-    text-align: center; 
-    font-size: 3em;
+text-align: center; 
+font-size: 3em;
 }
 
-  /*Tela 4 imprimindo */
+/*Tela 4 imprimindo foto */
 .imprim {
-    max-width: 25%;
-    max-height: 25%; 
-    margin-left: 37.5%;
-    margin-top: 4em;
+max-width: 40%;
+max-height: 40%; 
+margin-left: -11%;
+margin-top: 8.5%;
+position: absolute;
+/* float: center; */
+/* align-content: center; */
 }
-  /*Tela 4 imprimindo */
+/*Tela 4 frase imprimindo */
 .imprimr {
-    font-size: 3rem;
-    margin-top: 3.5%;
-    margin-left: 42.5%;
-    position: absolute;
+font-size: 2rem;
+margin-top: 20%;
+margin-left: -5%;
+position: absolute;
 }
 
 .size{
-    height: 60vh;
+height: 60vh;
+}
+
+/* parte para a responsividade da data hora e logo */
+@media screen and (min-width:0){
+    #data {
+        margin-right: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #data {
+        margin-right: 1rem;
+        width: calc(33.33% - 2.5rem);
+    }
+}
+
+@media screen and (min-width:992px) {
+    #data {
+        margin-right: 5rem;
+        width: calc(25% - 5rem);
+    }
+}
+
+@media screen and (min-width:0){
+    #hora {
+        margin-right: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #hora {
+        margin-right: 1rem;
+        width: calc(33.33% - 2.5rem);
+    }
+}
+
+@media screen and (min-width:992px) {
+    #hora {
+        margin-right: 5rem;
+        width: calc(25% - 5rem);
+    }
+}
+
+@media screen and (min-width: 0){
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        display: block;
+    }
 }
