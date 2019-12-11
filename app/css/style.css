@@ -1,5 +1,5 @@
-body{/*OK*/
-    /* font-size:140%; */
+body{
+    
     height: 95vh;
     font-family: 'Open Sans', sans-serif;
     color: green;
@@ -7,7 +7,7 @@ body{/*OK*/
     flex-direction: column;
     justify-content: space-around;
 }
-/*OK*/
+
 .row0{
     display: flex;
     justify-content: space-around;
@@ -57,7 +57,6 @@ body{/*OK*/
     font-weight: 750;
     font-size: 1.5em;
     color: white;
-    /*align-self: center;*/
     margin-left:-280%;
     float: left;
 
@@ -83,7 +82,6 @@ body{/*OK*/
     display:flex;
     justify-content: space-around;
     margin-left: 75%;
-    /* width: 175vw;*/
 }
 
 .row-end-voltar{
@@ -115,11 +113,11 @@ body{/*OK*/
     right:-24.3%;
 	position: relative;
 }
-/*---------------------------------------------------------------------------------------*/
+
 #hora {
     font-size: 3em;
     font-weight: bold;
-    margin-left: 47rem;
+    margin-left: 52rem;
 }
 
 /*Ajustes de data*/

@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Painel de Senhas</title>
-
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/open_sans.css" rel="stylesheet">
-    </head>
+    
+    <!--Requisições de arquivos js-->
+    <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
+    <script src="js/date_time.js"></script> <!-- Data e hora -->
+    <script src="sobre.html"></script>
+</head>
 
-    <body onload="clock();">
+<body onload="clock();">
+    <!-- Hora e Data -->
+    <div class='row0' role='grid'>
+        <span id="hora"></span>
+        <span id="data"></span>
+    </div>
 
-        <!-- Hora e Data -->
-        <div class='row0' role='grid'>
-            <span id="hora"></span>
-            <span id="data"></span>
+    <!-- Boas Vindas e Botão para direcionar a janela tipoSenha  -->
+    <div class='row  size' role='grid'>
+        <div class='col-spaced' role='grid'>
+            <h2 class="bem-vindo">Bem-Vindo<br>ao<br>Registro Acadêmico</h2>
+            <button class="button" type="button" onclick="window.location.href='tipoSenha.html'">INICIAR</button>
         </div>
+    </div>
 
-<!-- Boas Vindas e Botão para direcionar a janela tipoSenha  -->
-        <div class='row  size' role='grid'>
-            <div class='col-spaced' role='grid'>
-                <h2 class="bem-vindo">Bem-Vindo<br>ao<br>Registro Acadêmico</h2> 
-                <button class="button" type="button" onclick="window.location.href='tipoSenha.html'">INICIAR</button>
-            </div>
-        </div>
+    
 
-<!-- Roda pé. Logo IFB que direciona ao site do IFB -->
+    <!-- Roda pé. Logo IFB que direciona ao site do IFB -->
     <footer class='roww'>
         <div class="row-end">
             <a href="https://www.ifb.edu.br/"><img class="logo" src="img/logo_ifb.jpg"></a>
         </div>
     </footer>
-    
+</body>
 
-    <!--Requisições de arquivos js-->
-    <script src="js/jquery-1.11.2.js"></script> <!-- Arquivo jquery -->
-    <script src="js/date_time.js"></script> <!-- Data e hora -->
-    
-
-    </body>
 </html>

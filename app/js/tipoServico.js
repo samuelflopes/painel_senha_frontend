@@ -1,6 +1,7 @@
 // Fazendo uma requisição https
 const https = require('https');
 
+// 
 const criaBtn = (idTagPai, classe, tipo, nome, valor, texto, acao) => {
     var element = document.createElement("button");
     element.className = classe;
@@ -14,6 +15,7 @@ const criaBtn = (idTagPai, classe, tipo, nome, valor, texto, acao) => {
     tagPai.append(element);
 }
 
+// Ações ao clicar nos botões 
 let onclickBtn = ($event) => {
     console.log('Click no botão');
     console.log($event.target);
@@ -25,13 +27,6 @@ let onclickBtn = ($event) => {
     localStorage.setItem('cat.nome', nome);
     window.location.href = 'imprimindo.html'; // Redirecionando a uma nova Pagina;
 }
-
-
-
-// function btnGetSenha(){
-//     var objSenha = document.getElementById("senha");
-//     var objSenha = document.getElementById("senha");
-// }
 
 function getTipoSenhaAPI(token) {
     const tokenString = "Token " + token;

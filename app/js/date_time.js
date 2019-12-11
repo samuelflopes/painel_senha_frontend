@@ -13,10 +13,10 @@ const clock = () => {
     let dia = today.getDate();
     let mes = today.getMonth();
     let ano = today.getUTCFullYear();
-    
-    document.getElementById('data').innerHTML = today = dia +'/'+(mes++) + '/' + ano;
+    document.getElementById('data').innerHTML =
+    dia +'/'+(mes++) + '/' + ano;
 
-
+    // Atualização  da hora 
     let t = setTimeout(clock, 500);
 }
 

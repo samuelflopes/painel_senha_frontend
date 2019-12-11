@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^7.1.2"
+  },
+  "dependencies": {
+    "edge": "^7.10.1",
+    "node-gyp": "^6.0.1"
   }
 }
