@@ -17,6 +17,9 @@ let cat_id = localStorage.getItem('cat.id');
 let tipo_id = localStorage.getItem('tipo.id');
 let categoria = localStorage.getItem('cat.nome');
 let tipo = localStorage.getItem('tipo.nome');
+let date = new Date();
+let hour = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+let now = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}T${date.getHours()}:${date.getMinutes()}.${date.getSeconds()}Z`;
 
 
 const imprimir = (data) => {
@@ -32,9 +35,9 @@ const imprimir = (data) => {
     }
     let timestamp = data.hora_data.split('T');
     console.log(timestamp);
-    let hour = timestamp[1].split('.');
+    //let hour = timestamp[1].split('.');
     let fullDate = timestamp[0].split('-').reverse().join('/');
-    let text = `           REGISTRO  ACADÊMICO \n\n            ${fullDate}         ${hour[0]} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n.` 
+    let text = `           REGISTRO  ACADÊMICO \n\n            ${fullDate}         ${hour} \n\n\n\n\n                           ${data.senha}\n\n\n\n\n Atendimento: ${tipo} \n Serviço: ${categoria} \n\n.` 
     // printer.print(os.tmpdir() + "/tmp.png", options, 'PrinterName');
     printer.printText(text);
 };
