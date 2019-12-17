@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IFB-RA</title>
+        <meta charset="utf-8">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/date_time.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/senha.js"></script>
+        <script src="js/date_time.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+        <script type="text/javascript">
+        jQuery(window).load(function($){
+          atualizaRelogio();
+        });
+        </script>
+    </head>
+
+    <body>
+
+        <div class='row0' role='grid'>
+          <output id="hora"></output>
+          <output id="data"></output>
+        </div>
+
+        <div class="row_LeI">
+          <div class="ifbLogo">
+            <img src="https://www.ifb.edu.br/images/Marca_ifb.png">
+          </div>
+          <div class="info_inst"><p></p>
+
+          <span class="raTexto">Registro Acadêmico</span><br>	
+          <!--<img src="imagens/sisu.png" class="sisuLogo">-->
+          </div>
+        </div>
+
+        <div class="senhaAtual">
+          <div class="row_senha">
+            <div class="text_senha"><br><br>
+              <span class="senhaAtualTexto">SENHA | GUICHE</span>
+            </div>
+            <div class="numero_senha">
+              <span id="senhaAtualNumero">0000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ultimaSenhaTN"><br>
+
+          <span id="ultimaSenhaTexto">ÚLTIMAS CHAMADAS</span><br>
+          <span>Senhas | Guiches</span><br>
+          <span id="ultimaSenhaNumero">0000</span><br>
+          <span id="anteriorSenhaNumero">0000</span><br>
+          <span id="antepenultimaSenhaNumero">0000</span>
+          
+        </div>
+      
+        <!-- <audio id="audioChamada" src="audio/chamada.wav"></audio> -->
+	
+
+    </body>
+</html>

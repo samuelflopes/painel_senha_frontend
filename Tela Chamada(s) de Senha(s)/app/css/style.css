@@ -1,0 +1,104 @@
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+.ultimaSenhaTN {
+	margin-left: 0%;
+	text-align: center;
+	position: relative;
+}
+
+.row_LeI {
+	margin-top: 0px;
+	margin-bottom: 8%;
+}
+
+.info_inst {
+	text-align: center;	
+}
+
+.senhaAtual {
+	text-align: center;
+	background-color: green;
+	color: white;
+	margin-top: 0px;
+}
+/* #senhaAtualTexto {
+	font-size: 20pt;
+	font-weight: 800;
+	text-align: center;
+} */
+
+.senhaAtualTexto {
+	font-size: 20pt;
+	font-weight: 800;
+	text-align: center;
+}
+
+#senhaAtualNumero {
+	font-size: 55pt;
+	font-weight: 800;
+	text-align: center;
+}
+
+.ultimaSenha {
+	font-weight: 800;
+	text-align: center;
+	background-color: #ccc;
+	height: 130px;
+	margin-top: 20px;
+}
+
+#ultimaSenhaTexto {
+	font-size: 20px;
+	color: red;
+}
+
+#ultimaSenhaNumero {
+	font-size: 40px;
+	color: black;
+}
+
+#anteriorSenhaNumero {
+	font-size: 40px;
+	color: black; 
+}
+
+#antepenultimaSenhaNumero {
+	font-size: 40px;
+	color: black;
+}
+
+.ifbLogo {
+	width: 80px;
+	height: 50px;
+	margin-left: 40px;
+}
+
+.sisuLogo {
+	max-width: 400px;
+}
+
+.raTexto {
+	font-size: 35pt;
+	font-weight: 800;
+	color: green;
+}
+
+audio {
+	display: none;
+
+
+}
+
+@media screen and (min-width: 0){
+    .ifbLogo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .ifbLogo {
+        display: block;
+    }
+}

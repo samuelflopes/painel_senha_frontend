@@ -1,0 +1,17 @@
+.row0{
+  display: flex;
+  justify-content: space-between;
+  color: green;
+}
+#hora {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 50%;
+}
+
+/*Ajustes de data*/
+#data {
+  font-size: 20px;/*Tamanho font data*/
+  font-weight: bold;
+  margin-left: 12%;
+}
