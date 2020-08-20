@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "canvas": "^2.6.0",
     "canvas-constructor": "^3.1.0",
     "canvas-prebuilt": "^2.0.0-alpha.14",
