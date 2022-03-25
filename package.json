@@ -16,7 +16,7 @@
     "canvas-prebuilt": "^2.0.0-alpha.14",
     "edge-cs": "^1.2.1",
     "edge-js": "^13.0.1",
-    "electron": "^7.1.4",
+    "electron": "^13.6.6",
     "electron-edge-js": "^12.8.1",
     "node-cls": "^1.0.3",
     "node-gyp": "^6.0.1",
